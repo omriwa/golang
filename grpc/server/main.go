@@ -16,11 +16,7 @@ type Server struct {
 func (s *Server) Add(ctx context.Context, request *proto.Request) (*proto.Response, error) {
 	a, b := request.GetA(), request.GetB()
 
-	fmt.Printf("PARAMS %v %T\n", a, a)
-	fmt.Printf("PARAMS %v %T\n", b, b)
-
 	return &proto.Response{Result: a + b}, nil
-
 }
 func (s *Server) Subtract(ctx context.Context, request *proto.Request) (*proto.Response, error) {
 	a, b := request.GetA(), request.GetB()
